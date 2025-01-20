@@ -1,1 +1,1 @@
-Place your stylesheets here.
+Stylesheets
