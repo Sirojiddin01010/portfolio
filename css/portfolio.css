@@ -142,10 +142,20 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  justify-items: center; /* Centers the grid items */
-  align-items: center;  /* Vertically centers the grid items */
-  padding: 10px; /* Adds padding around the grid */
+  justify-items: center; /* Centers items horizontally */
+  align-items: center;  /* Centers items vertically */
+  padding: 0 10px; /* Adds equal padding on left and right */
+  max-width: 100%; /* Ensures the grid doesn't overflow */
+  margin: 0 auto; /* Centers the grid on the page */
 }
+
+@media (max-width: 480px) {
+  .project-grid {
+    grid-template-columns: 1fr; /* Single column layout for narrow screens */
+    padding: 0 15px; /* Adjust padding for small screens */
+  }
+}
+
 
 .project-card {
   background-color: white; /* Card background color */
