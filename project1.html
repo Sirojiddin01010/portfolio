@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/project1.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-branding">Sirojiddin Najmiddinov</a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="technicalinterests.html" class="nav-link">Technical Interests</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    // Toggle active class on hamburger and nav menu
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    // Close the menu when a nav-link is clicked
+    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }));
+  </script>
+
+
+
+
+
+
+
+
+
+
+<section class="project">
+  <div class="project-container">
+    <div class="interest">
+      <img src="images/project1.jpg" alt="Interest 1">
+      <h1>Team Software Project</h1>
+      <p>During my time at university, I had the opportunity to lead a team in designing and developing a gaming website while using Figma,HTML,CSS,JavaScript. This project allowed me to combine my creativity with my technical skills, as I took charge of the website's design and user experience while collaborating closely with my team members.
+
+        As the team leader, I was responsible for overseeing the entire design process, ensuring that the website was visually appealing, functional, and user-friendly. I worked on creating an engaging and dynamic layout that reflected the gaming theme, incorporating elements such as interactive features, vibrant colors, and intuitive navigation. I focused on making the design responsive, ensuring it worked seamlessly across different devices, from desktops to mobile phones.
+        
+        While leading the team, I facilitated communication and collaboration among all members. I assigned tasks based on individual strengths, set deadlines, and regularly checked in to track progress.
+        
+        
+        
+        
+        
+        </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="contact-container">
+  <a href="mailto:najmiddnovsirojiddin@outlook.com" target="_blank">Email</a>
+  <a href="https://www.linkedin.com/in/sirojiddin-najmiddinov-b00aba2b5" target="_blank">LinkedIn</a>
+  <p>+44 7984513791</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* Global reset for padding, margin, and box-sizing */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Header styling */
+header {
+  background-color: black;
+}
+
+/* Remove list-style for <li> elements */
+li {
+  list-style: none;
+}
+
+/* Link styling */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Navbar styling */
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+/* Navigation menu */
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Branding styling */
+.nav-branding {
+  font-size: 2rem;
+}
+
+/* Transition for nav-link hover */
+.nav-link {
+  transition: 0.7s ease;
+}
+
+/* Hover effect for nav-link */
+.nav-link:hover {
+  color: dodgerblue;
+}
+
+/* Hamburger icon hidden on large screens */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger bar styling */
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Media query for screens 768px and smaller */
+@media(max-width: 768px) {
+  /* Show hamburger icon only on smaller screens */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hamburger active state - transform bars into an 'X' */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Nav menu on smaller screens - hidden by default */
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  /* Nav menu active state - show when menu is open */
+  .nav-menu.active {
+    left: 0;
+  }
+
+  /* Nav items stacked vertically */
+  .nav-item {
+    margin: 16px 0;
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/technicalInterests.css"> <!-- Ensure the path to your CSS file is correct -->
+  <title>Portfolio</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-branding">Sirojiddin Najmiddinov</a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="technicalinterests.html" class="nav-link">Technical Interests</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <section class="content-area">
+    <section class="technical-interests">
+      <div class="technical-interests-container">
+        <div class="interest">
+          <img src="images/ai.JPG" alt="Interest 1">
+          <h1>AI</h1>
+          <p>I like the concept of AI because it is beneficial for developers as it enhances productivity, accelerates development processes, and automates repetitive tasks. AI-powered tools can help developers write code more efficiently by offering suggestions, identifying errors, and even generating boilerplate code. This allows developers to focus more on solving complex problems and creating innovative solutions, rather than spending time on mundane, repetitive tasks.
+
+          </p>
+        </div>
+        <div class="interest1">
+          <img src="images/softwareeng.jpg" alt="Interest 2">
+          <h1>Software engineering</h1>
+          <p>I am drawn to software engineering because it combines creativity with logic, offering a unique opportunity to solve complex problems while building innovative solutions. The process of designing and developing software allows me to express my creativity through user interfaces, system architecture, and problem-solving strategies, while also requiring a structured, logical approach to ensure the software is functional and efficient.</p>
+        </div>
+        <div class="interest2">
+          <img src="images/machineLearn.JPG" alt="Interest 3">
+          <h1>Machine learning</h1>
+          <p>I am interested in machine learning because it offers the ability to create systems that can learn from data, adapt, and improve over time, without needing explicit programming for every task. The potential to build intelligent systems that can recognize patterns, make predictions, and automate decision-making is incredibly exciting. Machine learning allows for the development of solutions that can handle vast amounts of data, identify trends, and make decisions with greater accuracy than traditional methods.</p>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Large Image on the Right Side (optional) -->
+
+  <footer class="contact-container">
+    <a href="mailto:najmiddnovsirojiddin@outlook.com" target="_blank">Email</a>
+    <a href="https://www.linkedin.com/in/sirojiddin-najmiddinov-b00aba2b5" target="_blank">LinkedIn</a>
+    <p>+44 7984513791</p>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    // Toggle active class on hamburger and nav menu
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    // Close the menu when a nav-link is clicked
+    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }));
+  </script>
+</body>
+</html>

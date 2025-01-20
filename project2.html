@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/project2.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-branding">Sirojiddin Najmiddinov</a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="portfolio.html" class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="technicalinterests.html" class="nav-link">Technical Interests</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    // Toggle active class on hamburger and nav menu
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    // Close the menu when a nav-link is clicked
+    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }));
+  </script>
+
+
+
+
+
+
+
+
+
+
+<section class="project">
+  <div class="project-container">
+    <div class="interest">
+      <img src="images/project2.JPG" alt="Interest 1">
+      <h1>Website </h1>
+      <p>I developed a website for a travel agency using Figma, HTML, CSS, and JavaScript. First, I designed the layout in Figma, focusing on a clean and engaging interface with images of travel destinations, clear navigation, and responsive design.
+
+        Using HTML, I structured the website with sections like the homepage, booking forms, and contact details. CSS was used to style the website according to the design, ensuring it was visually appealing and mobile-friendly. I added interactivity with JavaScript, including a booking form with validation and a destination image carousel.
+        
+        This project helped me refine my design and development skills, applying Figma, HTML, CSS, and JavaScript to create a functional and attractive website.
+        </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="contact-container">
+  <a href="mailto:najmiddnovsirojiddin@outlook.com" target="_blank">Email</a>
+  <a href="https://www.linkedin.com/in/sirojiddin-najmiddinov-b00aba2b5" target="_blank">LinkedIn</a>
+  <p>+44 7984513791</p>
+</footer>
+
+</body>
+</html>

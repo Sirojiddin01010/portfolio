@@ -1,0 +1,216 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: #f0f0f0; /* Light text for better contrast */
+}
+
+/* Header styling */
+header {
+  background-color: rgb(0, 0, 0);
+  position: fixed; /* Sticks header to the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the screen */
+  z-index: 1000; /* Keeps it above other elements */
+}
+
+/* Remove list-style for <li> elements */
+li {
+  list-style: none;
+}
+
+/* Link styling */
+a {
+  font-family: monospace;
+  color: rgb(255, 255, 255); /* Adjusted link color */
+  text-decoration: none;
+}
+
+/* Navbar styling */
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+/* Navigation menu */
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Branding styling */
+.nav-branding {
+  font-size: 2rem;
+  color: #ffffff; /* Ensure branding text is visible */
+}
+
+/* Transition for nav-link hover */
+.nav-link {
+  transition: 0.7s ease;
+}
+
+/* Hover effect for nav-link */
+.nav-link:hover {
+  color: dodgerblue;
+}
+
+/* Hamburger icon hidden on large screens */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger bar styling */
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: rgb(255, 255, 255); /* Adjusted bar color */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Media query for screens 768px and smaller */
+@media(max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Nav menu on smaller screens - hidden by default */
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  /* Nav menu active state - show when menu is open */
+  .nav-menu.active {
+    left: 0;
+  }
+
+  /* Nav items stacked vertically */
+  .nav-item {
+    margin: 16px 0;
+  }
+}
+
+/* Container for the interest boxes */
+.technical-interests-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamic columns */
+  gap: 20px; /* Space between the boxes */
+  max-width: 1200px; /* Limit the width of the grid */
+  margin: 40px auto; /* Center the container */
+  padding: 20px;
+}
+
+/* Individual Interest Box Styling */
+.interest, .interest1, .interest2 {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow for a lifted effect */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Styling for images inside interests */
+.interest img, .interest1 img, .interest2 img {
+  width: 100%; /* Makes the image responsive */
+  max-height: 150px; /* Adjust as needed for uniform height */
+  object-fit: cover; /* Ensures the image fills the space without distortion */
+  border-radius: 8px 8px 0 0; /* Matches the container's border-radius */
+  margin-bottom: 15px; /* Adds space between the image and the text */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional shadow for images */
+}
+
+/* Hover effect for interest boxes */
+.interest:hover, .interest1:hover, .interest2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-color: #007BFF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .technical-interests-container {
+    grid-template-columns: 1fr; /* Stack boxes vertically on small screens */
+    padding: 10px;
+  }
+}
+
+/* Adjusting the content area to ensure it doesn't overlap the fixed header */
+.content-area {
+  padding-top: 70px; /* Added padding to ensure content starts below the fixed header */
+  margin: 20px;
+  text-align: left;
+}
+
+/* Contact container styling */
+.contact-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.contact-container:hover {
+  transform: translateY(-5px);
+  background-color: rgb(255, 255, 255); /* Darker background on hover */
+}
+
+.contact-container a {
+  color: #000000; /* Ensures links are visible */
+  text-decoration: none;
+  display: block; /* Each link takes a new line */
+  margin-bottom: 5px;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.contact-container a:hover {
+  color: #000000; /* Darker color on hover */
+  text-decoration: underline;
+}
+
+.contact-container p {
+  margin: 5px 0 0; /* Spacing for phone number */
+}
