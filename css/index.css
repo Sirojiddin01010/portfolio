@@ -122,9 +122,12 @@ a {
   .nav-item {
     margin: 16px 0;
   }
+
+  /* Adjust navbar branding size */
+  .nav-branding {
+    font-size: 1.5rem;
+  }
 }
-
-
 
 /* Wrapper styling */
 .wrapper {
