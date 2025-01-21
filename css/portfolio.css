@@ -161,7 +161,7 @@ main {
   background-color: white; /* Card background color */
   color: rgb(0, 0, 0); /* Text color inside cards */
   border-radius: 8px;
-  padding: 20px;
+  padding: 60px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   text-align: left;
   max-width: 300px; /* Ensures cards don't stretch too wide on large screens */
@@ -187,7 +187,7 @@ main {
 }
 
 .project-link:hover {
-  color: #000000; /* Highlight on hover */
+  color: dodgerblue; /* Highlight on hover */
 }
 
 /* Contact container styling */
@@ -220,7 +220,7 @@ main {
 }
 
 .contact-container a:hover {
-  color: #000000; /* Darker color on hover */
+  color: dodgerblue; /* Darker color on hover */
   text-decoration: underline;
 }
 
