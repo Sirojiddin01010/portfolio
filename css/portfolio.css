@@ -161,7 +161,7 @@ main {
   background-color: white; /* Card background color */
   color: rgb(0, 0, 0); /* Text color inside cards */
   border-radius: 8px;
-  padding: 60px;
+  padding: 80px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   text-align: left;
   max-width: 300px; /* Ensures cards don't stretch too wide on large screens */
